@@ -70,10 +70,10 @@
     #include <GL/gl.h>     // for Linux and Windows
     #include <GL/glu.h>     // for Linux and Windows
     #ifndef HAVE_NO_GLUT
-		#ifdef _WIN64
-			#include "glut.h"  // for Windows x64
+		#ifdef _WIN32
+			#include "glut.h"  // for Windows
 		#else
-			#include <GL/glut.h>   // for Linux and Windows
+			#include <GL/glut.h>   // for Linux
 		#endif
     #endif
 #endif

@@ -58,10 +58,10 @@
 // XXX Need to revisit conditionalization on operating system.
 #if __APPLE__ && __MACH__
 #include <GLUT/glut.h>   // for Mac OS X
-#elif _WIN64
-#include "glut.h"		 // for Windows x64
+#elif _WIN32
+#include "glut.h"		 // for Windows
 #else
-#include <GL/glut.h>     // for Linux and Windows
+#include <GL/glut.h>     // for Linux
 #endif
 
 // ----------------------------------------------------------------------------
@@ -187,15 +187,11 @@ OpenSteer::OpenSteerDemo::errorExit (const char* message)
 {
     printMessage (message);
 #ifdef _MSC_VER
-	#ifdef _WIN64
-		WCHAR wmessage[100];
-		swprintf(wmessage, 100, L"%hs", message);
-		WCHAR wdesc[100];
-		swprintf(wdesc, 100, L"%hs", "OpenSteerDemo Unfortunate Event");
-		MessageBox(0, wmessage, wdesc, MB_ICONERROR);
-	#else
-		MessageBox(0, message, "OpenSteerDemo Unfortunate Event", MB_ICONERROR);
-	#endif
+	WCHAR wmessage[100];
+	swprintf(wmessage, 100, L"%hs", message);
+	WCHAR wdesc[100];
+	swprintf(wdesc, 100, L"%hs", "OpenSteerDemo Unfortunate Event");
+	MessageBox(0, wmessage, wdesc, MB_ICONERROR);
 #endif
     exit (-1);
 }

@@ -70,7 +70,11 @@
     #include <GL/gl.h>     // for Linux and Windows
     #include <GL/glu.h>     // for Linux and Windows
     #ifndef HAVE_NO_GLUT
-        #include <GL/glut.h>   // for Mac OS X
+		#ifdef _WIN64
+			#include "glut.h"  // for Windows x64
+		#else
+			#include <GL/glut.h>   // for Linux and Windows
+		#endif
     #endif
 #endif
 

@@ -2,10 +2,10 @@
 
 #include "ofxOpenSteer.h"
 
-using namespace OpenSteer;
+//using namespace OpenSteer;
 using namespace ofxOpenSteer;
 
-class ofxOpenSteerVehicle: public SimpleVehicle{
+class ofxOpenSteerVehicle: public OpenSteer::SimpleVehicle{
 
     public:
         ofxOpenSteerVehicle();
@@ -15,10 +15,10 @@ class ofxOpenSteerVehicle: public SimpleVehicle{
         virtual void update();
         virtual void update(float curTime, float elapsedTime);
         virtual void draw();    
-        virtual Vec3 getSteeringForce(const float elapsedTime);
+        virtual OpenSteer::Vec3 getSteeringForce(const float elapsedTime);
 		ofVec3f getPosition();
 
     protected:
 		OpenSteer::Color color; // XXX Just a convenience in case we want to use the default drawing method
-        static AVGroup neighbors;
+        static OpenSteer::AVGroup neighbors;
 };

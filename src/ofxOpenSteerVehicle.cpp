@@ -1,12 +1,12 @@
 #include "ofxOpenSteerVehicle.h"
 
-using namespace OpenSteer;
+//using namespace OpenSteer;
 using namespace ofxOpenSteer;
 
-AVGroup ofxOpenSteerVehicle::neighbors;
+OpenSteer::AVGroup ofxOpenSteerVehicle::neighbors;
 
 ofxOpenSteerVehicle::ofxOpenSteerVehicle(){
-    color = gGray30;
+    color = OpenSteer::gGray30;
     reset();
 }
 ofxOpenSteerVehicle::~ofxOpenSteerVehicle(){
@@ -28,8 +28,8 @@ void ofxOpenSteerVehicle::draw(){
 	annotationVelocityAcceleration ();
 	drawTrail();
 }
-Vec3 ofxOpenSteerVehicle::getSteeringForce(const float elapsedTime){
-	return Vec3(0, 0, 0);
+OpenSteer::Vec3 ofxOpenSteerVehicle::getSteeringForce(const float elapsedTime){
+	return OpenSteer::Vec3(0, 0, 0);
 }
 
 ofVec3f ofxOpenSteerVehicle::getPosition()

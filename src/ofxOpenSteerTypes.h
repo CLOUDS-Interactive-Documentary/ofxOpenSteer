@@ -3,7 +3,7 @@
 #include "SimpleVehicle.h"
 #include "PolylineSegmentedPathwaySingleRadius.h"
 
-using namespace OpenSteer;
+//using namespace OpenSteer;
 
 class ofxOpenSteerVehicle;
 
@@ -16,13 +16,13 @@ namespace ofxOpenSteer{
     
     struct ProximityDatabaseSettings{
         ProximityDatabaseSettings(){
-            center = Vec3();
+            center = OpenSteer::Vec3();
             divX = 20.f;
             divY = 20.f;
             divZ = 20.f;
             diameter = ofGetWidth();
         };
-        Vec3 center;
+        OpenSteer::Vec3 center;
         float divX;
         float divY;
         float divZ;

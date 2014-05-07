@@ -2,7 +2,6 @@
 
 #include "ofxOpenSteer.h"
 
-using namespace OpenSteer;
 using namespace ofxOpenSteer;
 
 

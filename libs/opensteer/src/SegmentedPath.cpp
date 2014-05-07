@@ -26,6 +26,10 @@
  * @author Bjoern Knafla <bknafla@uni-kassel.de>
  */
 #include "OpenSteer/SegmentedPath.h"
+//OpenSteer::Path::~Path()
+//{
+    // Nothing to do.
+//}
 
 OpenSteer::SegmentedPath::~SegmentedPath()
 {

@@ -262,7 +262,7 @@ OpenSteer::warnIfInUpdatePhase2 (const char* name)
     message << name;
     message << ")";
     message << std::ends;
-    std::cerr << message;       // send message to cerr, let host app worry about where to redirect it
+    std::cerr << message.str();       // send message to cerr, let host app worry about where to redirect it
 }
 
 

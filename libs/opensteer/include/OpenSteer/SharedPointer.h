@@ -53,7 +53,7 @@ namespace OpenSteer {
      * Helper class for @c SharedPointer.
      */
     struct SharedPointerReferenceCount {
-        typedef size_t size_type;
+        typedef std::size_t size_type;
         
         
         explicit SharedPointerReferenceCount(): referenceCount_( 1 ) {
@@ -89,7 +89,7 @@ namespace OpenSteer {
     template< typename T >
     class SharedPointer {
     public:
-        typedef size_t size_type;
+        typedef std::size_t size_type;
         typedef T value_type;
         typedef value_type& reference;
         typedef value_type const& const_reference;

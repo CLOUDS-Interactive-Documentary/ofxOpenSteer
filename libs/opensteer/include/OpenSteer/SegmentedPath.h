@@ -46,7 +46,7 @@ namespace OpenSteer {
     class SegmentedPath : public Path {
     public:
 
-        typedef size_t size_type;
+        typedef std::size_t size_type;
         
         virtual ~SegmentedPath() = 0;
         

@@ -61,7 +61,7 @@
     #include <OpenGL/gl.h>   // for Mac OS X
     #include <OpenGL/glu.h>   // for Mac OS X
     #ifndef HAVE_NO_GLUT
-        #include <GLUT/glut.h>   // for Mac OS X
+        #include "glut.h"   // for Mac OS X
     #endif
 #else
     #ifdef _MSC_VER

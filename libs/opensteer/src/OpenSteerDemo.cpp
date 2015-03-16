@@ -57,7 +57,7 @@
 // XXX In Mac OS X these headers are located in a different directory.
 // XXX Need to revisit conditionalization on operating system.
 #if __APPLE__ && __MACH__
-#include <GLUT/glut.h>   // for Mac OS X
+#include "glut.h"   // for Mac OS X
 #elif _WIN32
 #include "glut.h"		 // for Windows
 #else
